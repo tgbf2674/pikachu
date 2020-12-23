@@ -1,4 +1,16 @@
 import string from './css.js'
+var btn1 = document.getElementById('btn1')
+var audio = document.getElementById('myAudio')
+var tag= true
+btn1.onclick=function (){
+    if(tag){
+        audio.pause()
+        tag = false
+    }else{
+        audio.play()
+        tag= true
+    }
+}
 
 
 const player = {

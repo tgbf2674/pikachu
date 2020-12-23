@@ -134,6 +134,20 @@ var _css = _interopRequireDefault(require("./css.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var btn1 = document.getElementById('btn1');
+var audio = document.getElementById('myAudio');
+var tag = true;
+
+btn1.onclick = function () {
+  if (tag) {
+    audio.pause();
+    tag = false;
+  } else {
+    audio.play();
+    tag = true;
+  }
+};
+
 var player = {
   id: undefined,
   time: 100,
@@ -226,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61575" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63709" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
