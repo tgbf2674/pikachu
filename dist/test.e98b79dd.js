@@ -136,7 +136,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var btn1 = document.getElementById('btn1');
 var audio = document.getElementById('myAudio');
-var tag = true;
+var tag = false;
 
 btn1.onclick = function () {
   if (tag) {
@@ -240,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52835" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55304" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

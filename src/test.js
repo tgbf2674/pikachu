@@ -1,7 +1,7 @@
 import string from './css.js'
 var btn1 = document.getElementById('btn1')
 var audio = document.getElementById('myAudio')
-var tag= true
+var tag= false
 btn1.onclick=function (){
     if(tag){
         audio.pause()
