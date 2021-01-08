@@ -68,6 +68,7 @@ body {
   background: #2e2e2e;
   border-radius: 50%;
 }
+
 /* 伪元素 */
 .eye::before {
   content: "";
@@ -81,11 +82,36 @@ body {
   left: 8px;
   top: 2px;
 }
+@keyframes leftMove {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
 .eye.left {
-  transform: translateX(-100px);
+  /* transform: translateX(-100px); */
+  animation: leftMove 2s infinite linear;
+}
+
+@keyframes rightMove {
+  0% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 .eye.right {
-  transform: translateX(100px);
+  /* transform: translateX(100px); */
+  animation: rightMove 2s infinite linear;
 }
 
 .mouth {
@@ -167,6 +193,7 @@ body {
   margin-left: -100px;
   border-radius: 100px;
 }
+
 .face {
   position: absolute;
   left: 50%;

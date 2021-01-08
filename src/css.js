@@ -11,7 +11,7 @@ const string = `.skin * {
 
 .skin {
 background: #ffe600;
-  min-height: 50vh;
+  min-height: 60vh;
   position: relative;
 }
 
@@ -79,13 +79,37 @@ background: #ffe600;
   left: 8px;
   top: 2px;
 }
-.eye.left {
-  transform: translateX(-100px);
+@keyframes leftMove {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
 }
-.eye.right {
-  transform: translateX(100px);
+.eye.left {
+  /* transform: translateX(-100px); */
+  animation: leftMove 2s infinite linear;
 }
 
+@keyframes rightMove {
+  0% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+.eye.right {
+  /* transform: translateX(100px); */
+  animation: rightMove 2s infinite linear;
+}
 .mouth {
   width: 200px;
   height: 200px;
